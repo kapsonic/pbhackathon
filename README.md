@@ -1,4 +1,4 @@
-# Document generation POC for PB hackathon
+# PB Document Suite
 
 ### Introduction
 This is an end to end SAAS based solution which will gives the power to
@@ -19,7 +19,7 @@ digital channels.
 
 ### Flow Diagram
 
-![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+![alt text](https://raw.githubusercontent.com/kapsonic/pbhackathon/master/Flow.PNG)
 
 
 ### Tools and products used (All of PB)
@@ -27,4 +27,11 @@ digital channels.
 - ED 
 - Relay Communication Hub
 - Custom Job client to submit output of Spectrum to Relay hub for digital delivery
+
+
+### Contributors
+- Kapil Soni (kapil.soni@pb.com)
+- Sourabh Lodha (sourabh.lodha@pb.com)
+- Pulkit Anchalia(pulkit.anchalia@pb.com)
+- Vineet Kala (vineet.kala@pb.com)
 
