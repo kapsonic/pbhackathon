@@ -1,0 +1,371 @@
+<!--Exported Sun Jun 24 13:05:35 IST 2018 by admin from Pulkit-VM--><exportedDataflow schema_version="9.0"><exposed>false</exposed><dataflow id="1273$cs4$gyanadmin@maildrop.cc$" schema_version="9.0" version=""><product_group/><channels><channel id="156bc12b-efe8-4bed-95aa-c00d932872eb"><field_transformers/></channel><channel id="a7a0985b-a4e3-4571-8eab-919a9c309abf"><field_transformers/></channel></channels><created_by>admin</created_by><created_date>4/30/18 4:06 PM</created_date><service_exposures/><icon/><inputs/><last_modified_by>admin</last_modified_by><last_modified_date>4/30/18 4:06 PM</last_modified_date><outputs/><properties><property><name>ViewData</name><value><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<viewData version="3.0">
+  <canvasNode id="02a3dfdb-1603-43c2-b82f-f602ce043ad1">
+    <location x="731.5" y="472.1367" />
+  </canvasNode>
+  <canvasNode id="e7e86a47-974a-4230-88e8-c2ee20e8857b">
+    <location x="455.5" y="353.1367" />
+  </canvasNode>
+  <canvasNode id="0acf0350-473a-4763-a570-f64e62927bea">
+    <location x="133.5" y="513.1367" />
+  </canvasNode>
+  <canvasLink fromPortID="ab10e832-5b77-426e-b57b-fdb134646452" toPortID="3b6eb7ea-96cd-445d-9d88-75715bfa74f7" />
+  <canvasLink fromPortID="7b454c8a-b6ac-4e73-97a6-70bcd080dc30" toPortID="78a3f15b-4754-48b6-8003-72a6d5cf25c3" />
+</viewData>]]></value></property></properties><stages><stage id="0acf0350-473a-4763-a570-f64e62927bea"><stage_name>nosqldbsource</stage_name><stage_version/><label>Mongo</label><num_instances>1</num_instances><distributed>false</distributed><batch_size>10000</batch_size><settings><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<mongoDataSourceReaderConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <fields>
+    <noSQLField>
+      <name>_id</name>
+      <simpleFieldType>
+        <name>string</name>
+      </simpleFieldType>
+      <required>true</required>
+      <primaryKey>false</primaryKey>
+      <stageField>_id</stageField>
+    </noSQLField>
+    <noSQLField>
+      <name>customerNo</name>
+      <simpleFieldType>
+        <name>string</name>
+      </simpleFieldType>
+      <required>true</required>
+      <primaryKey>false</primaryKey>
+      <stageField>customerNo</stageField>
+    </noSQLField>
+    <noSQLField>
+      <name>date</name>
+      <simpleFieldType>
+        <name>string</name>
+      </simpleFieldType>
+      <required>true</required>
+      <primaryKey>false</primaryKey>
+      <stageField>date</stageField>
+    </noSQLField>
+    <noSQLField>
+      <name>salesPerson</name>
+      <simpleFieldType>
+        <name>string</name>
+      </simpleFieldType>
+      <required>true</required>
+      <primaryKey>false</primaryKey>
+      <stageField>salesPerson</stageField>
+    </noSQLField>
+    <noSQLField>
+      <name>poNumber</name>
+      <simpleFieldType>
+        <name>string</name>
+      </simpleFieldType>
+      <required>true</required>
+      <primaryKey>false</primaryKey>
+      <stageField>poNumber</stageField>
+    </noSQLField>
+    <noSQLField>
+      <name>shipAddress</name>
+      <listFieldType>
+        <name>shipAddress</name>
+        <schemaFieldType>
+          <name>shipAddress</name>
+          <fields>
+            <noSQLField>
+              <name>name</name>
+              <simpleFieldType>
+                <name>string</name>
+              </simpleFieldType>
+              <required>true</required>
+              <primaryKey>false</primaryKey>
+              <stageField>name</stageField>
+            </noSQLField>
+            <noSQLField>
+              <name>familyName</name>
+              <simpleFieldType>
+                <name>string</name>
+              </simpleFieldType>
+              <required>true</required>
+              <primaryKey>false</primaryKey>
+              <stageField>familyName</stageField>
+            </noSQLField>
+            <noSQLField>
+              <name>streetAddress</name>
+              <simpleFieldType>
+                <name>string</name>
+              </simpleFieldType>
+              <required>true</required>
+              <primaryKey>false</primaryKey>
+              <stageField>streetAddress</stageField>
+            </noSQLField>
+            <noSQLField>
+              <name>city</name>
+              <simpleFieldType>
+                <name>string</name>
+              </simpleFieldType>
+              <required>true</required>
+              <primaryKey>false</primaryKey>
+              <stageField>city</stageField>
+            </noSQLField>
+            <noSQLField>
+              <name>country</name>
+              <simpleFieldType>
+                <name>string</name>
+              </simpleFieldType>
+              <required>true</required>
+              <primaryKey>false</primaryKey>
+              <stageField>country</stageField>
+            </noSQLField>
+            <noSQLField>
+              <name>pinCode</name>
+              <simpleFieldType>
+                <name>string</name>
+              </simpleFieldType>
+              <required>true</required>
+              <primaryKey>false</primaryKey>
+              <stageField>pinCode</stageField>
+            </noSQLField>
+          </fields>
+        </schemaFieldType>
+      </listFieldType>
+      <required>true</required>
+      <primaryKey>false</primaryKey>
+      <stageField>shipAddress</stageField>
+    </noSQLField>
+    <noSQLField>
+      <name>billAddress</name>
+      <listFieldType>
+        <name>billAddress</name>
+        <schemaFieldType>
+          <name>billAddress</name>
+          <fields>
+            <noSQLField>
+              <name>name</name>
+              <simpleFieldType>
+                <name>string</name>
+              </simpleFieldType>
+              <required>true</required>
+              <primaryKey>false</primaryKey>
+              <stageField>name</stageField>
+            </noSQLField>
+            <noSQLField>
+              <name>familyName</name>
+              <simpleFieldType>
+                <name>string</name>
+              </simpleFieldType>
+              <required>true</required>
+              <primaryKey>false</primaryKey>
+              <stageField>familyName</stageField>
+            </noSQLField>
+            <noSQLField>
+              <name>streetAddress</name>
+              <simpleFieldType>
+                <name>string</name>
+              </simpleFieldType>
+              <required>true</required>
+              <primaryKey>false</primaryKey>
+              <stageField>streetAddress</stageField>
+            </noSQLField>
+            <noSQLField>
+              <name>city</name>
+              <simpleFieldType>
+                <name>string</name>
+              </simpleFieldType>
+              <required>true</required>
+              <primaryKey>false</primaryKey>
+              <stageField>city</stageField>
+            </noSQLField>
+            <noSQLField>
+              <name>country</name>
+              <simpleFieldType>
+                <name>string</name>
+              </simpleFieldType>
+              <required>true</required>
+              <primaryKey>false</primaryKey>
+              <stageField>country</stageField>
+            </noSQLField>
+            <noSQLField>
+              <name>pinCode</name>
+              <simpleFieldType>
+                <name>string</name>
+              </simpleFieldType>
+              <required>true</required>
+              <primaryKey>false</primaryKey>
+              <stageField>pinCode</stageField>
+            </noSQLField>
+          </fields>
+        </schemaFieldType>
+      </listFieldType>
+      <required>true</required>
+      <primaryKey>false</primaryKey>
+      <stageField>billAddress</stageField>
+    </noSQLField>
+    <noSQLField>
+      <name>items</name>
+      <listFieldType>
+        <name>items</name>
+        <schemaFieldType>
+          <name>items</name>
+          <fields>
+            <noSQLField>
+              <name>qty</name>
+              <simpleFieldType>
+                <name>string</name>
+              </simpleFieldType>
+              <required>true</required>
+              <primaryKey>false</primaryKey>
+              <stageField>qty</stageField>
+            </noSQLField>
+            <noSQLField>
+              <name>partNo</name>
+              <simpleFieldType>
+                <name>string</name>
+              </simpleFieldType>
+              <required>true</required>
+              <primaryKey>false</primaryKey>
+              <stageField>partNo</stageField>
+            </noSQLField>
+            <noSQLField>
+              <name>description</name>
+              <simpleFieldType>
+                <name>string</name>
+              </simpleFieldType>
+              <required>true</required>
+              <primaryKey>false</primaryKey>
+              <stageField>description</stageField>
+            </noSQLField>
+            <noSQLField>
+              <name>mfgNo</name>
+              <simpleFieldType>
+                <name>string</name>
+              </simpleFieldType>
+              <required>true</required>
+              <primaryKey>false</primaryKey>
+              <stageField>mfgNo</stageField>
+            </noSQLField>
+            <noSQLField>
+              <name>unit</name>
+              <simpleFieldType>
+                <name>string</name>
+              </simpleFieldType>
+              <required>true</required>
+              <primaryKey>false</primaryKey>
+              <stageField>unit</stageField>
+            </noSQLField>
+            <noSQLField>
+              <name>each</name>
+              <simpleFieldType>
+                <name>string</name>
+              </simpleFieldType>
+              <required>true</required>
+              <primaryKey>false</primaryKey>
+              <stageField>each</stageField>
+            </noSQLField>
+          </fields>
+        </schemaFieldType>
+      </listFieldType>
+      <required>true</required>
+      <primaryKey>false</primaryKey>
+      <stageField>items</stageField>
+    </noSQLField>
+  </fields>
+  <firstRecord>0</firstRecord>
+  <maxRows>0</maxRows>
+  <rowFetchSize>0</rowFetchSize>
+  <connectionName>mongo</connectionName>
+  <host />
+  <ignoreAbsentFields>false</ignoreAbsentFields>
+  <nosqlQuery />
+  <port>0</port>
+  <protocol />
+  <schemaFileName />
+  <tableName>invoiceData</tableName>
+</mongoDataSourceReaderConfiguration>]]></settings><input_ports/><options/><output_ports><output_port id="ab10e832-5b77-426e-b57b-fdb134646452"><channel idref="156bc12b-efe8-4bed-95aa-c00d932872eb"/><label>output_port</label><port_name>output_port</port_name></output_port><output_port id="1b2f0661-bffb-4d2b-9ac6-e00e8f47bc27"><label>error_port</label><port_name>error_port</port_name></output_port></output_ports><properties><property><name>ViewData</name><value/></property><property><name>stageItemName</name><value><![CDATA[nosqldbsource]]></value></property></properties></stage><stage id="e7e86a47-974a-4230-88e8-c2ee20e8857b"><stage_name>transformer</stage_name><stage_version/><label>Transformer</label><num_instances>1</num_instances><distributed>false</distributed><batch_size>10000</batch_size><settings><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<TransformerSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="3.0">
+  <transformDefinitions>
+    <transformDefinition>
+      <name>Custom</name>
+      <script>ls = System.getProperty("line.separator")
+data['recordline'] = ''
+line1 = '100' + '|' + data['customerNo'] + '|' + data['date'] + '|' + data['salesPerson'] + '|' + data['poNumber']
+data['recordline'] += ls + (line1)
+line2 = '101' + '|' + data['shipAddress']['name'] + '||' + data['shipAddress']['streetAddress'] + '|' + data['shipAddress']['city'] + '|' + data['shipAddress']['country'] + '|' + data['shipAddress']['pinCode']
+data['recordline'] += ls +  (line2)
+line3 = '102' + '|' + data['billAddress']['name'] + '||' + data['billAddress']['streetAddress'] + '|' + data['billAddress']['city'] + '|' + data['billAddress']['country'] + '|' + data['billAddress']['pinCode']
+data['recordline'] += ls + (line3)
+
+for (e in data['items']){
+	data['recordline'] += ls + ('103' + '|' + e['qty'] + '|' + e['partNo'] + '|' + e['description'] + '|' + e['mfgNo'] + '|' + e['unit'] + '|' + e['each'])
+}
+
+//data['recordline'] = ls + 'hi there'</script>
+      <transformParameters>
+        <transformParameter>
+          <name>inputColumn</name>
+          <type>string</type>
+          <value>shipAddress</value>
+        </transformParameter>
+        <transformParameter>
+          <name>inputColumn</name>
+          <type>string</type>
+          <value>_id</value>
+        </transformParameter>
+        <transformParameter>
+          <name>inputColumn</name>
+          <type>string</type>
+          <value>date</value>
+        </transformParameter>
+        <transformParameter>
+          <name>inputColumn</name>
+          <type>string</type>
+          <value>items</value>
+        </transformParameter>
+        <transformParameter>
+          <name>outputColumn</name>
+          <type>string</type>
+          <value>recordline</value>
+        </transformParameter>
+        <transformParameter>
+          <name>transformName</name>
+          <type>string</type>
+          <value>Custom Transform</value>
+        </transformParameter>
+      </transformParameters>
+      <transformFields>
+        <transformField>
+          <name>recordline</name>
+          <type>string</type>
+          <fieldType xsi:type="SimpleFieldTypeInternal">
+            <name>string</name>
+          </fieldType>
+        </transformField>
+      </transformFields>
+    </transformDefinition>
+  </transformDefinitions>
+</TransformerSettings>]]></settings><input_ports><input_port id="3b6eb7ea-96cd-445d-9d88-75715bfa74f7"><channel idref="156bc12b-efe8-4bed-95aa-c00d932872eb"/><label>input_port</label><port_name>input_port</port_name></input_port></input_ports><options/><output_ports><output_port id="7b454c8a-b6ac-4e73-97a6-70bcd080dc30"><channel idref="a7a0985b-a4e3-4571-8eab-919a9c309abf"/><label>output_port</label><port_name>output_port</port_name></output_port></output_ports><properties><property><name>ViewData</name><value/></property><property><name>stageItemName</name><value><![CDATA[transformer]]></value></property></properties></stage><stage id="02a3dfdb-1603-43c2-b82f-f602ce043ad1"><stage_name>variableformatsink</stage_name><stage_version/><label>Output</label><num_instances>1</num_instances><distributed>false</distributed><batch_size>10000</batch_size><settings><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<variableFormatCSVDataSourceWriterConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <fields>
+    <tagField>
+      <name>recordline</name>
+      <simpleFieldType>
+        <name>string</name>
+      </simpleFieldType>
+      <outputName>recordline</outputName>
+      <path>/</path>
+    </tagField>
+  </fields>
+  <append>false</append>
+  <enableMultiFile>false</enableMultiFile>
+  <encoding>UTF-8</encoding>
+  <externalCacheSize>0</externalCacheSize>
+  <fieldMultiFile />
+  <internalCacheSize>0</internalCacheSize>
+  <overrideDefaultSortConfiguration>false</overrideDefaultSortConfiguration>
+  <useCompressedStream>false</useCompressedStream>
+  <host />
+  <path>E:/DesignerHIP/Relay/Relay/abc.txt</path>
+  <port>-1</port>
+  <protocol>esclient</protocol>
+  <rootTag>Record</rootTag>
+  <tagWidth>0</tagWidth>
+  <delimiter>9</delimiter>
+  <lineSeparator />
+  <strictlyEnforceColumnCount>true</strictlyEnforceColumnCount>
+  <tagDelimiter>9</tagDelimiter>
+  <textQualifier>0</textQualifier>
+</variableFormatCSVDataSourceWriterConfiguration>]]></settings><input_ports><input_port id="78a3f15b-4754-48b6-8003-72a6d5cf25c3"><channel idref="a7a0985b-a4e3-4571-8eab-919a9c309abf"/><label>input_port</label><port_name>input_port</port_name></input_port></input_ports><options/><output_ports/><properties><property><name>ViewData</name><value/></property><property><name>stageItemName</name><value><![CDATA[variableformatsink]]></value></property></properties></stage></stages><reports/><notifications/><dataflow_options/><type>2</type><vendor/></dataflow></exportedDataflow>
