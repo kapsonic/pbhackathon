@@ -6,6 +6,11 @@ This is an end to end SAAS based solution which will gives the power to
 - Compose customized and domain specific documents
 - Distribution of composed documents to end customes through In house printing, Print providers, Digital deliveries like Inlet etc.
 
+> ## Complete working POC is in the VM with following details
+> - VM Name: **pulkit-VM**
+> - VM Location: **Watford**
+> **All the required server including spectrum server, Enterprise designer are already there at this VM.**
+
 ### How it works
 A brief flow of the system is as per below:
 1. Spectrum server to connect to Data source.
@@ -27,6 +32,8 @@ digital channels.
 - ED 
 - Relay Communication Hub
 - Custom Job client to submit output of Spectrum to Relay hub for digital delivery
+
+
 
 
 ### Contributors
