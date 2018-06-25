@@ -14,14 +14,16 @@ This is an end to end SAAS based solution which will gives the power to
 
 ### How it works
 A brief flow of the system is as per below:
-1. Spectrum server to connect to Data source.
-2. Reads data and transforms into flat file format for Engage one
-Designer which will compose these documents.
-3. Preview the composed document and publish.
-4. Output document once produced will be sent to Relay.
-5. Relay can further Enhance these documents if the need be else
+1. Data sources are configured in Spectrum server.
+2. Spectrum server connects to Data source.
+3. Workflows defined in Enterprise Designer, reads data and transform to the required format (Flat files which are readable by Engage One).
+4. Templates are defined in Engage one designer which holds the placeholders for the composistion.
+5. Preview the composed document and publish.
+6. Flat files generated from Spectrum workflows and templates from Engage one together processed in Enagage one to make a complete document.
+7. Final composed documents will be sent off to Relay with the help of custom tool built just for the purpose.
+8. Relay can further Enhance these documents if the need be with the help of workflows defined in it and then 
 distributes these documents to Print Provider , In-house printing or
-digital channels.
+digital channels like Inlet etc or available for direct download.
 
 ### Flow Diagram
 
@@ -30,7 +32,8 @@ digital channels.
 
 ### Tools and products used (All of PB)
 - Spectrum data intergration
-- ED 
+- Enterprise Designer
+- Engage one
 - Relay Communication Hub
 - Custom Job client to submit output of Spectrum to Relay hub for digital delivery
 
